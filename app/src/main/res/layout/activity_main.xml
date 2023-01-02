@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/Bttambah"
+        android:layout_width="90dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="#3467EB"
+        android:text="+"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Btminus" />
+
+    <Button
+        android:id="@+id/Btbagi"
+        android:layout_width="90dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="#cdb4db"
+        android:text="/"
+        app:layout_constraintBottom_toBottomOf="@+id/Btkali"
+        app:layout_constraintStart_toEndOf="@+id/Btkali"
+        app:layout_constraintTop_toTopOf="@+id/Btkali"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/Btkali"
+        android:layout_width="90dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+
+        android:backgroundTint="#ccd5ae"
+        android:text="x"
+        app:layout_constraintStart_toEndOf="@+id/Btminus"
+        app:layout_constraintTop_toBottomOf="@+id/etbil2" />
+
+    <Button
+        android:id="@+id/Btminus"
+        android:layout_width="90dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="#D87093"
+        android:text="-"
+        app:layout_constraintStart_toEndOf="@+id/Bttambah"
+        app:layout_constraintTop_toTopOf="@+id/Btkali" />
+
+    <EditText
+        android:id="@+id/etbil2"
+        android:layout_width="361dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Bilangan Dua"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHighlight="#000000"
+        android:textColorHint="#504D4D"
+        android:textColorLink="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/etbil1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etbil1"
+        app:layout_constraintTop_toBottomOf="@+id/etbil1" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="324dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="136dp"
+        android:text="KALKULATOR SEDERHANA"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etbil1"
+        android:layout_width="367dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="35dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Bilangan Satu"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHighlight="#000000"
+        android:textColorHint="#504D4D"
+        android:textColorLink="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/TextHasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="HASIL"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Btminus" />
+
+    <TextView
+        android:id="@+id/Hasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="0"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/TextHasil"
+        app:layout_constraintStart_toStartOf="@+id/TextHasil"
+        app:layout_constraintTop_toBottomOf="@+id/TextHasil" />
+
+    <Button
+        android:id="@+id/Bthapus"
+        android:layout_width="97dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#e63946"
+        android:text="Hapus"
+        app:layout_constraintEnd_toEndOf="@+id/TextHasil"
+        app:layout_constraintStart_toStartOf="@+id/TextHasil"
+        app:layout_constraintTop_toBottomOf="@+id/Hasil" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
